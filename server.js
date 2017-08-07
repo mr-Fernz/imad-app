@@ -10,11 +10,11 @@ app.get('/', function (req, res) {
 });
 
 app.get('/article-one',function (req,res) {
-   res.sendFile('this is the article number one'); 
+   res.send('this is the article number one'); 
 });
 
 app.get('/article-two',function (req,res) {
-   res.sendFile('this is the article number two'); 
+   res.send('this is the article number two'); 
 });
 
 app.get('/article-three',function (req,res) {
@@ -23,11 +23,11 @@ app.get('/article-three',function (req,res) {
 
 
 app.get('/ui/style.css', function (req, res) {
-  res.send(path.join(__dirname, 'ui', 'style.css'));
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
-  res.send(path.join(__dirname, 'ui', 'madi.png'));
+  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 
