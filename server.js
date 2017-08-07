@@ -18,16 +18,16 @@ app.get('/article-two',function (req,res) {
 });
 
 app.get('/article-three',function (req,res) {
-   res.sendFile('this is the article number three'); 
+   res.send('this is the article number three'); 
 });
 
 
 app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+  res.send(path.join(__dirname, 'ui', 'style.css'));
 });
 
 app.get('/ui/madi.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
+  res.send(path.join(__dirname, 'ui', 'madi.png'));
 });
 
 
