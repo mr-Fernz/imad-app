@@ -11,7 +11,7 @@ img.onclick = function()
 var div = document.getElementById('div');
 div.onclick = function()
 {
-    var int = setInterval(moveUp,50);
+    var interval = setInterval(moveUp,50);
 };
 function moveUp()
 {
