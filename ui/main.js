@@ -11,12 +11,12 @@ img.onclick = function()
 var div = document.getElementById('div');
 div.onclick = function()
 {
-    var interval = setInterval(moveUp,50);
+    var interval = setInterval(moveLeft,50);
 };
 function moveUp()
 {
-    marginUp = marginUp + 5;
-    div.style.marginUp = marginUp + 'px';
+    marginLeft = marginLeft + 5;
+    div.style.marginLeft = marginLeft + 'px';
 }
 
 var marginLeft = 0;
