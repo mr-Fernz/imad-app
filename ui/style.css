@@ -27,3 +27,9 @@ body {
     margin-Left: 100px;
     margin-Right: 100px;
 }
+
+.like{
+    max-width: 10px;
+    max-height: 10px;
+    
+}
