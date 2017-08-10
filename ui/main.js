@@ -1,27 +1,9 @@
-console.log('Loaded!');
+//counter for like button
+var counter = 0;
+var button = document.getElementById('counter');
 
-//move the image
-var img = document.getElementById('madi');
-img.onclick = function()
-{
-
-    var interval = setInterval(moveRight,50);
+button.onclick = function() {
+    counter = counter + 1;
+    var span = document.getElementById('span');
+    span.innerHTML = counter.toString();
 };
-
-/*var div = document.getElementById('div');
-div.onclick = function()
-{
-    var interval = setInterval(moveLeft,50);
-};
-function moveUp()
-{
-    marginLeft = marginLeft + 5;
-    div.style.marginLeft = marginLeft + 'px';
-}*/
-
-var marginLeft = 0;
-function moveRight()
-{
-    marginLeft = marginLeft + 1;
-    img.style.marginLeft = marginLeft + 'px';
-}
