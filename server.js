@@ -3,6 +3,14 @@ var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
 var bodyParser = require('body-parser');
+
+var config =  {
+    user: 'anzilfernandes4',
+    database: 'anzilfernandes4',
+    host: 'http://db.imad.hasura-app.io',
+    port: '5432',
+    password: process.env.DB_PASSWORD
+};
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
