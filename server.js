@@ -2,7 +2,7 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
-var bodyParser = require('bodyparser');
+var bodyParser = require('bodyParser');
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
