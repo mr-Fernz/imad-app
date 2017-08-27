@@ -90,7 +90,7 @@ app.get('/hash/:input', function(req,res) {
 });
 
 app.post('/create_user', function(req,res) {
-   var salt = getRandomBytes(128).tostring('hex');
+   var salt = RandomBytes(128).tostring('hex');
    var dbstring = hash(password, salt);
    var username = req.body.username;
    var password = req.body.password;
