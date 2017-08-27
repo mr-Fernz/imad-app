@@ -2,8 +2,10 @@ var express = require('express');
 var morgan = require('morgan');
 var path = require('path');
 var crypto = require('crypto');
+var bodyParser = require('bodyparser');
 var app = express();
 app.use(morgan('combined'));
+app.use(bodyParser.json());
 
 var articleone = {
     title: 'article-one |Anzel Fernandes',
@@ -85,6 +87,19 @@ function hash(input, salt)
 app.get('/hash/:input', function(req,res) {
     var hashedString = hash(req.params.input,'this-is-some-random-string');
     res.send(hashedString);
+});
+
+app.post('/create_user', function(req,res) {
+   var salt = RandomBytes(128).tostring('hex');
+   var dbstring = hash(password, salt);
+   var username = req.body.username;
+   var password = req.body.password;
+   pool.query('INSERT INTO "user"(username, password) VAUES ($1 , $2)', [username,dbstirng], function(err, result) {
+       if (err)
+            res.status(500).send(err, tostring());
+        else 
+            res.send('user succcessfully created' + username);
+   });
 });
 
 app.get('/article-one',function (req,res) {
